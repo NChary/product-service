@@ -1,0 +1,82 @@
+{
+	"variables": [],
+	"info": {
+		"name": "product_services",
+		"_postman_id": "8b06826a-d88f-b6a6-3226-71986cd75b5f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Product",
+			"request": {
+				"url": "localhost:8080/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"pid\":102,\n   \"pname\":\"Mouse\",\n   \"price\":8787.36,\n   \"manDate\":\"2021-05-2019\",\n   \"expDate\":\"2021-05-2030\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"url": "localhost:8080/product",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"url": "localhost:8080/product",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"pid\":102,\n   \"pname\":\"Keyboard\",\n   \"price\":121.36,\n   \"manDate\":\"2021-05-2019\",\n   \"expDate\":\"2021-05-2030\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"url": "localhost:8080/product",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"pid\":102,\n   \"pname\":\"Keyboard\",\n   \"price\":121.36,\n   \"manDate\":\"2021-05-2019\",\n   \"expDate\":\"2021-05-2030\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
