@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"pid\":102,\n   \"pname\":\"Mouse\",\n   \"price\":8787.36,\n   \"manDate\":\"2021-05-2019\",\n   \"expDate\":\"2021-05-2030\"\n}"
+					"raw": "{\n   \"pid\":103,\n   \n   \"price\":98.36,\n   \"manDate\":\"2021-05-2019\",\n   \"expDate\":\"2021-05-2030\"\n}"
 				},
 				"description": ""
 			},
@@ -74,6 +74,17 @@
 					"mode": "raw",
 					"raw": "{\n   \"pid\":102,\n   \"pname\":\"Keyboard\",\n   \"price\":121.36,\n   \"manDate\":\"2021-05-2019\",\n   \"expDate\":\"2021-05-2030\"\n}"
 				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Product Search",
+			"request": {
+				"url": "localhost:8080/product/test",
+				"method": "GET",
+				"header": [],
+				"body": {},
 				"description": ""
 			},
 			"response": []

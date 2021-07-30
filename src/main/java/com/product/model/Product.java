@@ -4,56 +4,43 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotEmpty;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name="product")
+@Builder
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
 	@Id
 	@Column(name="pid")
 	private int pid;
 	
+	@NotEmpty(message="Product Name is mandatory")
 	@Column(name="pname")
 	private String pname;
 	
+	//@NotEmpty(message="Price is mandatory")
+	@DecimalMax("100.0") 
+	@DecimalMin("10.0")
 	@Column(name="price")
-	private double price;
+	private Double price;
 	
 	@Column(name="man_date")
 	private String manDate;
 	
 	@Column(name="exp_date")
 	private String expDate;
-	
-	public int getPid() {
-		return pid;
-	}
-	public void setPid(int pid) {
-		this.pid = pid;
-	}
-	public String getPname() {
-		return pname;
-	}
-	public void setPname(String pname) {
-		this.pname = pname;
-	}
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
-	public String getManDate() {
-		return manDate;
-	}
-	public void setManDate(String manDate) {
-		this.manDate = manDate;
-	}
-	public String getExpDate() {
-		return expDate;
-	}
-	public void setExpDate(String expDate) {
-		this.expDate = expDate;
-	}
-	
+		
 }
